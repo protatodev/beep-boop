@@ -23,7 +23,7 @@ function scramble(number) {
       }
     }
   } else {
-    for(i = 0; i < numberConverted; i++) {
+    for(i = 0; i <= numberConverted; i++) {
       displayOutput(i);
     }
   }
@@ -71,12 +71,19 @@ function displayOutput(number) {
   $("p#output").append(number + " ");
 }
 
+// Clear all form and output fields
 function clearFields() {
   var form = document.getElementById("entryForm");
   clearInterval(timer);
   $("p#output").html("");
   $("#outputFooter").html("");
   form.reset();
+}
+
+// Create message showing the last number entered
+function createMessage(number) {
+  $("span#message").text(number);
+  $(".pre-hidden").hide().fadeIn(1500);
 }
 
 
@@ -88,6 +95,7 @@ $(document).ready(function() {
     clearFields();
     scramble(number);
     startTimer();
+    createMessage(number)
   });
 
 });

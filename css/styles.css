@@ -5,3 +5,8 @@
 .col-sm-6 {
   margin: auto;
 }
+
+.pre-hidden {
+  display: none;
+  margin: auto;
+}
