@@ -83,7 +83,7 @@ function clearFields() {
 // Create message showing the last number entered
 function createMessage(number) {
   $("span#message").text(number);
-  $(".pre-hidden").hide().fadeIn(1500);
+  $(".pre-hidden").hide().fadeIn(2000);
 }
 
 
