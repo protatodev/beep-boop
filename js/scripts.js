@@ -30,6 +30,23 @@ function scramble(number) {
 
 }
 
+/*
+Display a running time console that shows the elapse time since the last submission.
+*/
+function startTimer() {
+  var seconds = 0;
+  var minutes = 0;
+
+  var timer = setInterval(function() {
+    seconds++;
+
+    // Display the result in the element with id="outputFooter"
+    document.getElementById("outputFooter").innerHTML = "Last updated: " + parseInt(seconds / 60) + "m " + (seconds % 60) + "s " + "ago.";
+
+  }, 1000);
+
+}
+
 // Front End Function(s)
 // Display default error message if input is divisible by 3
 function displayError() {
@@ -54,7 +71,8 @@ function displayOutput(number) {
 
 function clearFields() {
   var form = document.getElementById("entryForm");
-  $("p#output").val("");
+  $("p#output").html("");
+  $("#outputFooter").html("");
   form.reset();
 }
 
@@ -64,7 +82,9 @@ $(document).ready(function() {
   $("#entryForm").submit(function(event) {
     event.preventDefault();
     var number = ($("input#numberInput").val());
+    clearFields();
     scramble(number);
+    startTimer();
   });
 
 });
