@@ -12,22 +12,22 @@
 This website will accept a user input in the form of a number. Based on the digits entered, a string of output will be displayed to the user.
 
 ## Spec
-- 1. Create algorithm to display a range of digits (0 to [the number inputted]
-  - Example input: 4
-  - Example output: 0 1 2 3
-- 2. Create algorithm to display the word "beep" to the user if the number inputted contains zeroes.
-  - Example input: 20
-  - Example output: Beep!
-- 3. Create algorithm to display the word "boop" to the user if the number inputted contains ones.
-  - Example input: 1
-  - Example output: Boop!
-- 4. Create algorithm to display a default error message to the user if the number inputted is divisible evenly by 3.
-  - Example input: 30
-  - Example output: I'm sorry, Dave. I'm afraid I can't do that.
-- 5. Refactor all backend functions so that they process output in the correct order from lowest to highest priority.
-- 6. Refactor "beep" and "boop" functions so that the word is outputted consecutively based on the number of zeroes or ones encountered in the number inputted.
-  - Example input: 11
-  - Example output: Boop! Boop!
+- Create algorithm to display a range of digits (0 to [the number inputted]
+  - Example input: **_4_**
+  - Example output: **_0 1 2 3_**
+- Create algorithm to display the word "beep" to the user if the number inputted contains zeroes.
+  - Example input: **_20_**
+  - Example output: **_Beep!_**
+- Create algorithm to display the word "boop" to the user if the number inputted contains ones.
+  - Example input: **_1_**
+  - Example output: **_Boop!_**
+- Create algorithm to display a default error message to the user if the number inputted is divisible evenly by 3.
+  - Example input: **_30_**
+  - Example output: **_I'm sorry, Dave. I'm afraid I can't do that._**
+- Refactor all backend functions so that they process output in the correct order from lowest to highest priority.
+- Refactor "beep" and "boop" functions so that the word is outputted consecutively based on the number of zeroes or ones encountered in the number inputted.
+  - Example input: **_11_**
+  - Example output: **_Boop! Boop!_**
 
 ## Setup/Installation Requirements
 
