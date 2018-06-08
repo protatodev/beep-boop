@@ -33,11 +33,13 @@ function scramble(number) {
 /*
 Display a running time console that shows the elapse time since the last submission.
 */
+var timer = null;
+
 function startTimer() {
   var seconds = 0;
   var minutes = 0;
 
-  var timer = setInterval(function() {
+  timer = setInterval(function() {
     seconds++;
 
     // Display the result in the element with id="outputFooter"
@@ -71,6 +73,7 @@ function displayOutput(number) {
 
 function clearFields() {
   var form = document.getElementById("entryForm");
+  clearInterval(timer);
   $("p#output").html("");
   $("#outputFooter").html("");
   form.reset();
