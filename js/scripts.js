@@ -52,6 +52,12 @@ function displayOutput(number) {
   $("p#output").append(number + " ");
 }
 
+function clearFields() {
+  var form = document.getElementById("entryForm");
+  $("p#output").val("");
+  form.reset();
+}
+
 
 $(document).ready(function() {
 
