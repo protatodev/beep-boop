@@ -6,26 +6,18 @@
 */
 function scramble(number) {
   var numberConverted = parseInt(number);
-  var numArray = number.split("");
 
-  if(numberConverted % 3 === 0) {
-    displayError();
-  } else if(number.indexOf("1") > -1) {
-    for(i = 0; i < numArray.length; i++) {
-      if(numArray[i] == "1") {
-        displayBoop();
-      }
+  for(i = 0; i <= numberConverted; i++) {
+    if(i % 3 === 0) {
+      displayError();
+    } else if(i.toString().indexOf("1") > -1) {
+          displayBoop();
+    } else if(i.toString().indexOf("0") > -1) {
+          displayBeep();
+    } else {
+        displayOutput(i);
     }
-  } else if(number.indexOf("0") > -1) {
-    for(i = 0; i < numArray.length; i++) {
-      if(numArray[i] == "0") {
-        displayBeep();
-      }
-    }
-  } else {
-    for(i = 0; i <= numberConverted; i++) {
-      displayOutput(i);
-    }
+
   }
 
 }
@@ -52,7 +44,7 @@ function startTimer() {
 // Front End Function(s)
 // Display default error message if input is divisible by 3
 function displayError() {
-  $("p#output").text("I'm sorry, Dave. I'm afraid I can't do that.");
+  $("p#output").append("I'm sorry, Dave. I'm afraid I can't do that. ");
 }
 
 // Display "beep!" for each "0" entered by the user
